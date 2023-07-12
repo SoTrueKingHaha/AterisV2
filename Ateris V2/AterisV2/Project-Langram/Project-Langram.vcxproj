@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d03ea683-ba30-4621-85b1-e1460bb0a13c}</ProjectGuid>
+    <RootNamespace>ProjectLangramv1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;PROJECTLANGRAMV1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;PROJECTLANGRAMV1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;PROJECTLANGRAMV1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;PROJECTLANGRAMV1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework\features\aimbot\aimbot.h" />
+    <ClInclude Include="framework\features\aimbot\movesim.h" />
+    <ClInclude Include="framework\features\aimbot\proj_sim.h" />
+    <ClInclude Include="framework\features\antiaim\antiaim.h" />
+    <ClInclude Include="framework\features\backtrack\backtrack.h" />
+    <ClInclude Include="framework\features\crits\crits.h" />
+    <ClInclude Include="framework\features\engine\prediction.h" />
+    <ClInclude Include="framework\features\esp\esp.h" />
+    <ClInclude Include="framework\features\events\events.h" />
+    <ClInclude Include="framework\features\indicators\indicators.h" />
+    <ClInclude Include="framework\features\menu\config\config.h" />
+    <ClInclude Include="framework\features\menu\Input.h" />
+    <ClInclude Include="framework\features\menu\Menu.h" />
+    <ClInclude Include="framework\features\menu\vars.h" />
+    <ClInclude Include="framework\features\menu\WindowMenu.h" />
+    <ClInclude Include="framework\features\misc\misc.h" />
+    <ClInclude Include="framework\features\models\models.h" />
+    <ClInclude Include="framework\features\outlines\outlines.h" />
+    <ClInclude Include="framework\framework.h" />
+    <ClInclude Include="framework\hooks\hooks.h" />
+    <ClInclude Include="framework\hooks\hooklist.h" />
+    <ClInclude Include="framework\hooks\MinHook\include\MinHook.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\buffer.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\hde\hde32.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\hde\hde64.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\hde\pstdint.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\hde\table32.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\hde\table64.h" />
+    <ClInclude Include="framework\hooks\MinHook\src\trampoline.h" />
+    <ClInclude Include="framework\sdk\game\beams.h" />
+    <ClInclude Include="framework\sdk\game\bitbuf.h" />
+    <ClInclude Include="framework\sdk\game\cbasehandle.h" />
+    <ClInclude Include="framework\sdk\game\checksum_crc.h" />
+    <ClInclude Include="framework\sdk\game\color.h" />
+    <ClInclude Include="framework\sdk\game\const.h" />
+    <ClInclude Include="framework\sdk\game\convar.h" />
+    <ClInclude Include="framework\sdk\game\c_baseanimating.h" />
+    <ClInclude Include="framework\sdk\game\c_baseanimatingoverlay.h" />
+    <ClInclude Include="framework\sdk\game\c_basecombatcharacter.h" />
+    <ClInclude Include="framework\sdk\game\c_basecombatweapon.h" />
+    <ClInclude Include="framework\sdk\game\c_baseentity.h" />
+    <ClInclude Include="framework\sdk\game\c_baseflex.h" />
+    <ClInclude Include="framework\sdk\game\c_baseplayer.h" />
+    <ClInclude Include="framework\sdk\game\c_captureflag.h" />
+    <ClInclude Include="framework\sdk\game\c_tfplayer.h" />
+    <ClInclude Include="framework\sdk\game\c_tfweaponbase.h" />
+    <ClInclude Include="framework\sdk\game\c_usercmd.h" />
+    <ClInclude Include="framework\sdk\game\dt_common.h" />
+    <ClInclude Include="framework\sdk\game\dt_recv.h" />
+    <ClInclude Include="framework\sdk\game\dt_recv_redef.h" />
+    <ClInclude Include="framework\sdk\game\econ_item_constants.h" />
+    <ClInclude Include="framework\sdk\game\econ_item_schema.h" />
+    <ClInclude Include="framework\sdk\game\EHandle.h" />
+    <ClInclude Include="framework\sdk\game\GameEventListener.h" />
+    <ClInclude Include="framework\sdk\game\gameeventmanager.h" />
+    <ClInclude Include="framework\sdk\game\game_coordinator_stuff.h" />
+    <ClInclude Include="framework\sdk\game\globalvars_base.h" />
+    <ClInclude Include="framework\sdk\game\iappsystem.h" />
+    <ClInclude Include="framework\sdk\game\ibaseclientdll.h" />
+    <ClInclude Include="framework\sdk\game\icliententity.h" />
+    <ClInclude Include="framework\sdk\game\icliententitylist.h" />
+    <ClInclude Include="framework\sdk\game\iclientmodeshared.h" />
+    <ClInclude Include="framework\sdk\game\icollideable.h" />
+    <ClInclude Include="framework\sdk\game\iconvar.h" />
+    <ClInclude Include="framework\sdk\game\icvar.h" />
+    <ClInclude Include="framework\sdk\game\iengineclient.h" />
+    <ClInclude Include="framework\sdk\game\ienginetrace.h" />
+    <ClInclude Include="framework\sdk\game\ienginevgui.h" />
+    <ClInclude Include="framework\sdk\game\igameevents.h" />
+    <ClInclude Include="framework\sdk\game\igamemovement.h" />
+    <ClInclude Include="framework\sdk\game\iinput.h" />
+    <ClInclude Include="framework\sdk\game\iinputsystem.h" />
+    <ClInclude Include="framework\sdk\game\imaterial.h" />
+    <ClInclude Include="framework\sdk\game\imaterialsystem.h" />
+    <ClInclude Include="framework\sdk\game\imatrendercontext.h" />
+    <ClInclude Include="framework\sdk\game\imovehelper.h" />
+    <ClInclude Include="framework\sdk\game\Interfaces.h" />
+    <ClInclude Include="framework\sdk\game\iprediction.h" />
+    <ClInclude Include="framework\sdk\game\irenderview.h" />
+    <ClInclude Include="framework\sdk\game\ishader.h" />
+    <ClInclude Include="framework\sdk\game\ishaderapi.h" />
+    <ClInclude Include="framework\sdk\game\ishaderdevice.h" />
+    <ClInclude Include="framework\sdk\game\ishaderdynamic.h" />
+    <ClInclude Include="framework\sdk\game\ishadershadow.h" />
+    <ClInclude Include="framework\sdk\game\istaticpropmgr.h" />
+    <ClInclude Include="framework\sdk\game\istudiorender.h" />
+    <ClInclude Include="framework\sdk\game\isurface.h" />
+    <ClInclude Include="framework\sdk\game\itexture.h" />
+    <ClInclude Include="framework\sdk\game\ivdebugoverlay.h" />
+    <ClInclude Include="framework\sdk\game\iviewrender.h" />
+    <ClInclude Include="framework\sdk\game\ivmodelinfo.h" />
+    <ClInclude Include="framework\sdk\game\ivmodelrender.h" />
+    <ClInclude Include="framework\sdk\game\KeyValues.h" />
+    <ClInclude Include="framework\sdk\game\md5.h" />
+    <ClInclude Include="framework\sdk\game\memalloc.h" />
+    <ClInclude Include="framework\sdk\game\panel.h" />
+    <ClInclude Include="framework\sdk\game\proxyfnhook.h" />
+    <ClInclude Include="framework\sdk\game\Steam\AppsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\AppTicketCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\BillingCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\BridgeCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\CCallback.h" />
+    <ClInclude Include="framework\sdk\game\Steam\CGameID.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ClientCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ContentServerCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ControllerCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\CSteamAPIContext.h" />
+    <ClInclude Include="framework\sdk\game\Steam\CSteamID.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ECurrencyCode.h" />
+    <ClInclude Include="framework\sdk\game\Steam\EResult.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamAppUpdateStatsQueryType.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamBufferMethod.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamError.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamFindFilter.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamNotify.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamPaymentCardType.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamSeekMethod.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamServerType.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamSubscriptionBillingInfoType.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ESteamSubscriptionStatus.h" />
+    <ClInclude Include="framework\sdk\game\Steam\EVoiceResult.h" />
+    <ClInclude Include="framework\sdk\game\Steam\FriendGameInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\FriendsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\GameCoordinatorCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\GameServerCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\gameserveritem.h" />
+    <ClInclude Include="framework\sdk\game\Steam\GameServerStatsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\GameStatsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\HTTPCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientAppManager.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientApps.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientAudio.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientBilling.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientConfigStore.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientContentServer.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientDepotBuilder.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientDeviceAuth.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientEngine.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientFriends.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientGameCoordinator.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientGameServer.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientGameServerStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientGameStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientHTTP.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientInventory.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientMasterServerUpdater.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientMatchmaking.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientMatchmakingServers.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientMusic.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientNetworkDeviceManager.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientNetworking.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientProductBuilder.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientRemoteStorage.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientScreenshots.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientShortcuts.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientStreamClient.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientStreamLauncher.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientUGC.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientUnifiedMessages.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientUser.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientUserStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\IClientUtils.h" />
+    <ClInclude Include="framework\sdk\game\Steam\Interface_OSW.h" />
+    <ClInclude Include="framework\sdk\game\Steam\InventoryCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam2Bridge001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteam2Bridge002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamAppList001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamApps007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamAppTicket001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamBilling001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamBilling002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient012.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient013.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient014.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient015.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient016.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamClient017.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamContentServer001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamContentServer002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamController001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends012.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends013.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends014.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamFriends015.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameCoordinator001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServer012.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameServerStats001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamGameStats001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamHTTP001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamHTTP002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamInventory001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMasterServerUpdater001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmaking009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmakingServers001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMatchmakingServers002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamMusic001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworking001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworking002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworking003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworking004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworking005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamNetworkingUtils.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamOAuth001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamRemoteStorage012.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamScreenshots001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamScreenshots002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamStreamLauncher001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUGC001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUGC002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUGC003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUnifiedMessages001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser012.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser013.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser014.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser015.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser016.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUser017.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats008.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats009.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats010.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUserStats011.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils001.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils002.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils003.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils004.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils005.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils006.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ISteamUtils007.h" />
+    <ClInclude Include="framework\sdk\game\Steam\MasterServerUpdaterCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\MatchmakingCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\MatchMakingKeyValuePair.h" />
+    <ClInclude Include="framework\sdk\game\Steam\MatchmakingServersCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\MusicCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\NetworkingCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\OAuthCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\POSIXLibrary.h" />
+    <ClInclude Include="framework\sdk\game\Steam\RemoteStorageCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\ScreenshotsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\servernetadr.h" />
+    <ClInclude Include="framework\sdk\game\Steam\Steam.h" />
+    <ClInclude Include="framework\sdk\game\Steam\SteamAPI.h" />
+    <ClInclude Include="framework\sdk\game\Steam\Steamclient.h" />
+    <ClInclude Include="framework\sdk\game\Steam\SteamclientAPI.h" />
+    <ClInclude Include="framework\sdk\game\Steam\SteamSalt.h" />
+    <ClInclude Include="framework\sdk\game\Steam\SteamTypes.h" />
+    <ClInclude Include="framework\sdk\game\Steam\Steamworks.h" />
+    <ClInclude Include="framework\sdk\game\Steam\StreamLauncherCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamApp.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamAppDependencyInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamAppLaunchOption.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamAppStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamAppVersion.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamDiscountQualifier.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamElemInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamError.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamExternalBillingInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamGlobalUserID.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamOfflineStatus.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamPaymentCardInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamPaymentCardReceiptInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamPrepurchaseInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamPrepurchaseReceiptInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamProgress.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSplitLocalUserID.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSubscription.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSubscriptionBillingInfo.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSubscriptionDiscount.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSubscriptionReceipt.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamSubscriptionStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\TSteamUpdateStats.h" />
+    <ClInclude Include="framework\sdk\game\Steam\UGCCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\UnifiedMessagesCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\UserCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\UserStatsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\UtilsCommon.h" />
+    <ClInclude Include="framework\sdk\game\Steam\Win32Library.h" />
+    <ClInclude Include="framework\sdk\game\tf_gamerules.h" />
+    <ClInclude Include="framework\sdk\game\tf_item_constants.h" />
+    <ClInclude Include="framework\sdk\game\tf_item_schema.h" />
+    <ClInclude Include="framework\sdk\game\tf_player_resource.h" />
+    <ClInclude Include="framework\sdk\game\uniformrandomstream.h" />
+    <ClInclude Include="framework\sdk\game\utlflags.h" />
+    <ClInclude Include="framework\sdk\game\utlstring.h" />
+    <ClInclude Include="framework\sdk\game\utlvector.h" />
+    <ClInclude Include="framework\sdk\game\vector.h" />
+    <ClInclude Include="framework\sdk\game\vmatrix.h" />
+    <ClInclude Include="framework\sdk\game\vphysics_interface.h" />
+    <ClInclude Include="framework\sdk\globals\globalinfo.h" />
+    <ClInclude Include="framework\sdk\interfaces\interfaces.h" />
+    <ClInclude Include="framework\sdk\interface_list.h" />
+    <ClInclude Include="framework\typedefs.h" />
+    <ClInclude Include="framework\utils\console\console.h" />
+    <ClInclude Include="framework\utils\convars\convars.h" />
+    <ClInclude Include="framework\utils\draw\color.h" />
+    <ClInclude Include="framework\utils\draw\draw.h" />
+    <ClInclude Include="framework\utils\entitycache\entitycache.h" />
+    <ClInclude Include="framework\utils\entitycache\FNV1A.h" />
+    <ClInclude Include="framework\utils\entitycache\player_resource.h" />
+    <ClInclude Include="framework\utils\json\json.hpp" />
+    <ClInclude Include="framework\utils\math\math.h" />
+    <ClInclude Include="framework\utils\memory\memory.h" />
+    <ClInclude Include="framework\utils\netvars\netvars.h" />
+    <ClInclude Include="framework\utils\signatures\signatures.h" />
+    <ClInclude Include="framework\utils\utils.h" />
+    <ClInclude Include="framework\utils\winapi\winapi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="framework\features\aimbot\aimbot.cpp" />
+    <ClCompile Include="framework\features\aimbot\movesim.cpp" />
+    <ClCompile Include="framework\features\aimbot\proj_sim.cpp" />
+    <ClCompile Include="framework\features\antiaim\antiaim.cpp" />
+    <ClCompile Include="framework\features\backtrack\backtrack.cpp" />
+    <ClCompile Include="framework\features\crits\crits.cpp" />
+    <ClCompile Include="framework\features\engine\prediction.cpp" />
+    <ClCompile Include="framework\features\esp\esp.cpp" />
+    <ClCompile Include="framework\features\events\events.cpp" />
+    <ClCompile Include="framework\features\indicators\indicators.cpp" />
+    <ClCompile Include="framework\features\menu\config\config.cpp" />
+    <ClCompile Include="framework\features\menu\Input.cpp" />
+    <ClCompile Include="framework\features\menu\Menu.cpp" />
+    <ClCompile Include="framework\features\menu\vars.cpp" />
+    <ClCompile Include="framework\features\menu\WindowMenu.cpp" />
+    <ClCompile Include="framework\features\misc\misc.cpp" />
+    <ClCompile Include="framework\features\models\models.cpp" />
+    <ClCompile Include="framework\features\outlines\outlines.cpp" />
+    <ClCompile Include="framework\framework.cpp" />
+    <ClCompile Include="framework\hooks\hooks.cpp" />
+    <ClCompile Include="framework\hooks\hooklist.cpp" />
+    <ClCompile Include="framework\hooks\MinHook\src\buffer.c" />
+    <ClCompile Include="framework\hooks\MinHook\src\hde\hde32.c" />
+    <ClCompile Include="framework\hooks\MinHook\src\hde\hde64.c" />
+    <ClCompile Include="framework\hooks\MinHook\src\hook.c" />
+    <ClCompile Include="framework\hooks\MinHook\src\trampoline.c" />
+    <ClCompile Include="framework\sdk\game\beams.cpp" />
+    <ClCompile Include="framework\sdk\game\bitbuf.cpp" />
+    <ClCompile Include="framework\sdk\game\cbasehandle.cpp" />
+    <ClCompile Include="framework\sdk\game\checksum_crc.cpp" />
+    <ClCompile Include="framework\sdk\game\c_baseanimating.cpp" />
+    <ClCompile Include="framework\sdk\game\c_basecombatcharacter.cpp" />
+    <ClCompile Include="framework\sdk\game\c_basecombatweapon.cpp" />
+    <ClCompile Include="framework\sdk\game\c_baseentity.cpp" />
+    <ClCompile Include="framework\sdk\game\c_baseplayer.cpp" />
+    <ClCompile Include="framework\sdk\game\c_tfplayer.cpp" />
+    <ClCompile Include="framework\sdk\game\c_tfweaponbase.cpp" />
+    <ClCompile Include="framework\sdk\game\gameeventmanager.cpp" />
+    <ClCompile Include="framework\sdk\game\game_coordinator_stuff.cpp" />
+    <ClCompile Include="framework\sdk\game\ibaseclientdll.cpp" />
+    <ClCompile Include="framework\sdk\game\iengineclient.cpp" />
+    <ClCompile Include="framework\sdk\game\ienginetrace.cpp" />
+    <ClCompile Include="framework\sdk\game\imovehelper.cpp" />
+    <ClCompile Include="framework\sdk\game\isurface.cpp" />
+    <ClCompile Include="framework\sdk\game\ivdebugoverlay.cpp" />
+    <ClCompile Include="framework\sdk\game\KeyValues.cpp" />
+    <ClCompile Include="framework\sdk\game\md5.cpp" />
+    <ClCompile Include="framework\sdk\game\utlvector.cpp" />
+    <ClCompile Include="framework\sdk\game\vector.cpp" />
+    <ClCompile Include="framework\sdk\interfaces\interfaces.cpp" />
+    <ClCompile Include="framework\utils\console\console.cpp" />
+    <ClCompile Include="framework\utils\convars\convars.cpp" />
+    <ClCompile Include="framework\utils\draw\draw.cpp" />
+    <ClCompile Include="framework\utils\entitycache\entitycache.cpp" />
+    <ClCompile Include="framework\utils\math\math.cpp" />
+    <ClCompile Include="framework\utils\memory\memory.cpp" />
+    <ClCompile Include="framework\utils\netvars\netvars.cpp" />
+    <ClCompile Include="framework\utils\signatures\signatures.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
